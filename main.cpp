@@ -2,15 +2,17 @@
 #include <stdint.h>
 #include <netinet/in.h>
 
-int main()
+
+int main(int argc, char* argv[])
 {
+
     FILE *file1;
-    file1 = fopen("/home/kali/Desktop/thousand.bin","r");
+    file1 = fopen(argv[1],"r");
     if (file1 == NULL) return -1;
     uint32_t thousand;
 
     FILE *file2;
-    file2 = fopen("/home/kali/Desktop/five-hundred.bin","r");
+    file2 = fopen(argv[2],"r");
     if (file2 == NULL) return -1;
     uint32_t five_hundred;
 
